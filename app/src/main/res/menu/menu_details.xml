@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="dv606.eo222fw.walkish.HistoryDetailsActivity">
+    <item
+        android:id="@+id/menu_details"
+        android:icon="@drawable/ic_action_menu_white"
+        android:orderInCategory="100"
+        android:title="@string/action_menu"
+        app:showAsAction="always|withText">
+        <menu>
+            <!-- go to main activity -->
+            <item
+                android:id="@+id/choose_home"
+                app:showAsAction="always"
+                android:title="@string/main"/>
+
+            <!-- go to session activity -->
+            <item
+                android:id="@+id/choose_session"
+                app:showAsAction="always"
+                android:title="@string/session"/>
+            <!-- show settings -->
+            <item
+                android:id="@+id/choose_settings"
+                app:showAsAction="always"
+                android:title="@string/settings"/>
+
+        </menu>
+    </item>
+
+</menu>

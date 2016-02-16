@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="dv606.eo222fw.walkish.RoutesHistoryActivity">
+      <item
+          android:id="@+id/menu_history"
+          android:icon="@drawable/ic_action_menu_white"
+          android:orderInCategory="100"
+          android:title="@string/action_menu"
+          app:showAsAction="always|withText">
+            <menu>
+                  <!-- go to main activity -->
+                  <item
+                      android:id="@+id/choose_home"
+                      app:showAsAction="ifRoom"
+                      android:title="@string/main"/>
+
+                  <!-- go to session activity -->
+                  <item
+                      android:id="@+id/choose_session"
+                      app:showAsAction="ifRoom"
+                      android:title="@string/session"/>
+                  <!-- show settings -->
+                  <item
+                      android:id="@+id/choose_settings"
+                      app:showAsAction="never"
+                      android:title="@string/settings"/>
+
+            </menu>
+      </item>
+
+</menu>

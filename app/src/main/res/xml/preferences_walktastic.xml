@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:summary="GPS Settings"
+        android:title="Location" >
+        <ListPreference
+            android:entries="@array/gpsUpdateList"
+            android:entryValues="@array/gpsUpdateValues"
+            android:key="refreshGPS"
+            android:defaultValue="1"
+            android:summary="Select frequency of GPS updates requests during a walking session. More frequent updates will drain battery faster but will provide more accurate results"
+            android:title="GPS update intervals" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:summary="Map Settings"
+        android:title="Map and route" >
+        <ListPreference
+            android:entries="@array/mapTypesArray"
+            android:entryValues="@array/values"
+            android:key="mapType"
+            android:defaultValue="2"
+            android:summary="Select map type"
+            android:title="Map type" />
+        <ListPreference
+            android:entries="@array/colourRouteArray"
+            android:entryValues="@array/values"
+            android:key="routeColour"
+            android:defaultValue="1"
+            android:summary="Select colour that will be used to display the route on the map"
+            android:title="Route colour" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:summary="General Settings"
+        android:title="General" >
+        <EditTextPreference
+            android:key="weight"
+            android:defaultValue="60"
+            android:inputType="number"
+            android:digits="0123456789"
+            android:summary="Enter your weight in kilograms. This information is required to calculate calories burtnt during a walking session."
+            android:title="Weight (kg)" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dv606.eo222fw.walkish" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Maps API needs OpenGL ES 2.0. -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="dv606.eo222fw.walkish.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="dv606.eo222fw.walkish.WalkingMapActivity"
+            android:label="@string/title_activity_walking_map" >
+        </activity>
+        <activity
+            android:name="dv606.eo222fw.walkish.RoutesHistoryActivity"
+            android:label="@string/title_activity_routes_history"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="dv606.eo222fw.walkish.HistoryDetailsActivity"
+            android:label="@string/title_activity_history_details"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="dv606.eo222fw.walkish.RoutesHistoryActivity" />
+        </activity>
+        <activity
+            android:name="dv606.eo222fw.walkish.HistoryMap"
+            android:label="@string/title_activity_history_map"
+            android:screenOrientation="portrait" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="dv606.eo222fw.walkish.HistoryDetailsActivity" />
+        </activity>
+
+        <service
+            android:name="dv606.eo222fw.walkish.LocationService"
+            android:enabled="true"
+            android:permission="android.permission.ACCESS_FINE_LOCATION" >
+        </service>
+
+        <activity
+            android:name="dv606.eo222fw.walkish.PreferencesActivity"
+            android:label="@string/title_activity_settings" >
+        </activity>
+    </application>
+
+</manifest>

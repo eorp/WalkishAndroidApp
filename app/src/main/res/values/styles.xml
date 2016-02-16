@@ -1,0 +1,60 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <!--<item name="actionBarStyle">@style/Widget.AppTheme.ActionBar</item>-->
+        <item name="actionBarTheme">@style/ThemeOverlay.AppTheme.ActionBar</item>
+        <item name="actionBarPopupTheme">@style/ThemeOverlay.AppTheme.PopupMenu</item>
+        <item name="actionBarStyle">@style/MyApp.ActionBar</item>
+        <item name="actionOverflowMenuStyle">@style/MyApp.ActionBar.Overflow</item>
+    </style>
+    <style name="MyApp.ActionBar.Overflow" parent="Widget.AppCompat.PopupMenu.Overflow">
+        <item name="android:popupBackground">@android:color/holo_blue_dark</item>
+    </style>
+
+    <style name="Widget.AppTheme.ActionBar" parent="Widget.AppCompat.ActionBar.Solid">
+        <!-- action bar background -->
+        <item name="background">@android:color/holo_blue_dark</item>
+        <!-- action bar elevation -->
+        <item name="elevation">4dp</item>
+    </style>
+    <style name="Widget.AppTheme.Overflow" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <!-- action bar background -->
+        <item name="background">@android:color/holo_blue_dark</item>
+
+    </style>
+    <style name="ThemeOverlay.AppTheme.ActionBar" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- title text color -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!-- subtitle text color -->
+        <item name="android:textColorSecondary">?android:textColorPrimary</item>
+        <!-- action menu item text color -->
+        <item name="actionMenuTextColor">?android:textColorPrimary</item>
+        <!-- action menu item icon color - only applies to appcompat-v7 icons :( -->
+        <item name="colorControlNormal">?android:textColorPrimary</item>
+    </style>
+
+    <style name="ThemeOverlay.AppTheme.PopupMenu" parent="ThemeOverlay.AppCompat.Dark">
+        <!-- popup menu background - NEVER "android:background" !!! in themes -->
+        <item name="android:colorBackground">@android:color/holo_blue_dark</item>
+        <!-- popup menu item text color -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+    </style>
+
+
+    <style name="MyApp.ActionBar" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <!-- Blue background color & black bottom border -->
+        <item name="android:background">@drawable/action_bar_blue_bg</item>
+        <!-- Support library compatibility -->
+        <item name="background">@drawable/action_bar_blue_bg</item>
+    </style>
+
+    <!-- The beef: background color for Action Bar overflow menu -->
+    <!--<style name="MyApp.PopupMenu" parent="android:Widget.Holo.Light.ListPopupWindow">
+        <item name="android:popupBackground">@drawable/menu_dropdown_panel</item>
+    </style>-->
+
+
+
+</resources>
